@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Withdraw</title>
+    </head>
+    <body>
+        <div class="container">
+            <form #form="ngForm" (ngSubmit)="deposit(form.value)">
+                <table>
+                    <tr>
+                        <td><label>Account Id : </label></td>
+                        <td><input type="number" name="account" required ngModel></td>
+                    </tr>
+                    <tr>
+                        <td><label>Password : </label></td>
+                        <td><input type="password" name="password" required ngModel></td>
+                    </tr>
+                    <tr>
+                        <td><label>Withdraw Amount : </label></td>
+                        <td><input type="number" name="amount" required ngModel></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right"><input type="submit" value="Deposit"></td>
+                        <td><input type="reset" value="Reset"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="show" *ngIf=withdrawAmount>
+            Withdrawal of Rs. {{withdrawAmount}}
+        </div>
+    </body>
+</html>
+
+       
+   

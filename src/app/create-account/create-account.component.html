@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>Create Account</title>
+    </head>
+    <body>
+        <div class="container">
+            <form #form="ngForm" (ngSubmit)="create(form.value)">
+                <table>
+                    <tr>
+                        <td><label>Name : </label></td>
+                        <td><input type="text" name="name" required ngModel></td>
+                    </tr>
+                    <tr>
+                        <td><label>Password : </label></td>
+                        <td><input type="password" name="password" required ngModel></td>
+                    </tr>
+                    <tr>
+                        <td><label>Email : </label></td>
+                        <td><input type="email" name="email" required ngModel></td>
+                    </tr>
+                    <tr>
+                        <td><label>Mobile Number : </label></td>
+                        <td><input type="text" name="mobile" required ngModel></td>
+                    </tr>
+                    <tr>
+                        <td><label>Address : </label></td>
+                        <td><input type="text" name="address" required ngModel></td>
+                    </tr>
+                    <tr>
+                        <td><label>Date Of Birth : </label></td>
+                        <td><input type="text" name="dob" required ngModel></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right"><input type="submit" value="Submit"></td>
+                        <td><input type="reset" value="Reset"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div class="show">
+            <p *ngIf=accountId>
+                    Account created with account Id :{{accountId}}
+            </p>
+        </div>
+    </body>
+</html>
+
+       
+   
